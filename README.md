@@ -2,20 +2,20 @@
 
 
 
-terraform init
-terraform validate
-terraform plan
-terraform apply -auto-approve
-terraform destory -auto-approve
-terraform state list
+1. terraform init
+2. terraform validate
+3. terraform plan
+4. terraform apply -auto-approve
+5. terraform destory -auto-approve
+6. terraform state list
 $ terraform.exe state list
 google_compute_network.myvpc
 google_compute_subnetwork.mysubnet1
 google_compute_subnetwork.mysubnet2
 ===============================
-terraform state show google_compute_network.myvpc
+7. terraform state show google_compute_network.myvpc
 $ terraform.exe state show google_compute_network.myvpc
-# google_compute_network.myvpc:
+ google_compute_network.myvpc:
 resource "google_compute_network" "myvpc" {
     auto_create_subnetworks                   = false
     delete_default_routes_on_create           = false
