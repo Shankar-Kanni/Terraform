@@ -14,7 +14,7 @@ google_compute_subnetwork.mysubnet1
 google_compute_subnetwork.mysubnet2
 ===============================
 7. terraform state show google_compute_network.myvpc
- terraform.exe state show google_compute_network.myvpc
+# terraform.exe state show google_compute_network.myvpc
 google_compute_network.myvpc:
 resource "google_compute_network" "myvpc" {
     auto_create_subnetworks                   = false
@@ -33,4 +33,3 @@ resource "google_compute_network" "myvpc" {
     self_link                                 = "https://www.googleapis.com/compute/v1/projects/terra-55091/global/networks/myvpc"
 }
 
-Admin@DESKTOP-AVF76MU MINGW64 ~/Terraform/Terraform/03-Project (main)
