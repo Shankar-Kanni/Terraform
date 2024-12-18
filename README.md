@@ -1,5 +1,7 @@
 # Terraform
 
+
+
 terraform init
 terraform validate
 terraform plan
