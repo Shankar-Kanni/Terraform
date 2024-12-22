@@ -33,3 +33,6 @@ resource "google_compute_network" "myvpc" {
     self_link                                 = "https://www.googleapis.com/compute/v1/projects/terra-55091/global/networks/myvpc"
 }
 
+
+git filter-branch --force --index-filter    'git rm -r --cached --ignore-unmatch 04-Project/.terraform*'    --prune-empty --tag-name-filter cat -- --all
+
