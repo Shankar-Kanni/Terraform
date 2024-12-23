@@ -4,7 +4,14 @@ on:
         inputs:
             WORKING_DIR:
                 description: "Enter the working dir to create the resources on GCP"
-                type: string               
+                type: string
+            TERRAFORM_COMMAND:
+                description: "Choose terraform apply or destroy command"
+                default: "apply"
+                type: choice
+                options:
+                  - apply
+                  - destroy       
                 
 jobs:
     terraform-on-gcp:
@@ -41,6 +48,6 @@ jobs:
               run: terraform plan
               
 
-            - name: Terraform apply
-              run: terraform apply -auto-approve
+            - name: Terraform ${{ inputs.TERRAFORM_COMMAND }}
+              run: terraform ${{ inputs.TERRAFORM_COMMAND }} -auto-approve
               
