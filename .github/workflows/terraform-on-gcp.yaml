@@ -32,15 +32,15 @@ jobs:
 
             - name: Terraform fmt
               run: terraform fmt
-              working-directory: ./GKE_STD
+             
             - name: Terraform Init
               run: terraform init
-              working-directory: ./GKE_STD
+            
 
             - name: Terraform plan
               run: terraform plan
-              working-directory: ./GKE_STD
+              
 
             - name: Terraform apply
               run: terraform apply -auto-approve
-              working-directory: ./GKE_STD
+              
