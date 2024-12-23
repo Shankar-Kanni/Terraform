@@ -8,14 +8,14 @@
 4. terraform apply -auto-approve
 5. terraform destory -auto-approve
 6. terraform state list
- terraform.exe state list
+```t
+$ terraform.exe state list
 google_compute_network.myvpc
 google_compute_subnetwork.mysubnet1
 google_compute_subnetwork.mysubnet2
-===============================
-7. terraform state show google_compute_network.myvpc
-# terraform.exe state show google_compute_network.myvpc
+```
 
+7. terraform state show google_compute_network.myvpc
 ```t
 google_compute_network.myvpc:
 resource "google_compute_network" "myvpc" {
