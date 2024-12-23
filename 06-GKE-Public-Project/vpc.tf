@@ -1,3 +1,4 @@
+# To create custom VPC
 resource "google_compute_network" "myvpc" {
   name = "${local.name}-vpc"
   auto_create_subnetworks = false
