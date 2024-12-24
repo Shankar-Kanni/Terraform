@@ -38,4 +38,8 @@ resource "google_compute_network" "myvpc" {
 ```t
 git filter-branch --force --index-filter    'git rm -r --cached --ignore-unmatch 04-Project/.terraform*'    --prune-empty --tag-name-filter cat -- --all
 ```
-
+Run following command to see the public IP address
+```t
+shankarkanni80@cloudshell:~$ dig +short myip.opendns.com @resolver1.opendns.com
+34.22.160.21
+```
