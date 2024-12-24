@@ -2,19 +2,21 @@
 
 
 
-1. terraform init
-2. terraform validate
-3. terraform plan
-4. terraform apply -auto-approve
-5. terraform destory -auto-approve
-6. terraform state list
- terraform.exe state list
+1. **terraform init** # _To initialize the provide and download the required plugin_
+2. **terraform validate** # _To validate the terraform files if they are syntactically correct_
+3. **terraform plan** # _To create a plan and see what terraform is going to build for us_
+4. **terraform apply -auto-approve** # _To create the resources on cloud using the terraform files._
+5. **terraform destory -auto-approve** # _To destory the infra that was created already_
+6. **terraform state list** # _To list the resources that are cleared as part of terraform_
+```t
+$ terraform.exe state list
 google_compute_network.myvpc
 google_compute_subnetwork.mysubnet1
 google_compute_subnetwork.mysubnet2
-===============================
-7. terraform state show google_compute_network.myvpc
-# terraform.exe state show google_compute_network.myvpc
+```
+
+7. **terraform state show google_compute_network.myvpc**
+```t
 google_compute_network.myvpc:
 resource "google_compute_network" "myvpc" {
     auto_create_subnetworks                   = false
@@ -32,7 +34,12 @@ resource "google_compute_network" "myvpc" {
     routing_mode                              = "REGIONAL"
     self_link                                 = "https://www.googleapis.com/compute/v1/projects/terra-55091/global/networks/myvpc"
 }
-
-
+```
+```t
 git filter-branch --force --index-filter    'git rm -r --cached --ignore-unmatch 04-Project/.terraform*'    --prune-empty --tag-name-filter cat -- --all
-
+```
+Run following command to see the public IP address
+```t
+shankarkanni80@cloudshell:~$ dig +short myip.opendns.com @resolver1.opendns.com
+34.22.160.21
+```
