@@ -5,13 +5,13 @@
 gcloud compute instances list
 
 ## SSH to GKE Node VM
-gcloud compute ssh --zone "ZONE" "VM-NAME" --internal-ip  --project "gcplearn9"
-gcloud compute ssh --zone "us-central1-b" "gke-hr-dev-gke-clust-hr-dev-linux-nod-50d31441-2s7c" --internal-ip  --project "gcplearn9"
+gcloud compute ssh --zone "ZONE" "VM-NAME" --internal-ip  --project "terra-55091"
+gcloud compute ssh --zone "us-central1-b" "gke-hr-dev-gke-clust-hr-dev-linux-nod-50d31441-2s7c" --internal-ip  --project "terra-55091"
 exit
 ```
 ```t
 # Connect to bastion VM
-gcloud compute ssh --zone "us-central1-a" "hr-dev-bastion-vm" --tunnel-through-iap --project "gcplearn9"
+gcloud compute ssh --zone "us-central1-a" "hr-dev-bastion-vm" --tunnel-through-iap --project "terra-55091"
 
 # Verify installed software
 gcloud version
