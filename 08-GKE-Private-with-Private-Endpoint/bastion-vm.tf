@@ -23,7 +23,7 @@ resource "google_compute_instance" "bastion" {
     subnetwork = google_compute_subnetwork.mysubnet.id
     network_ip = google_compute_address.bastion_internal_ip.address
   }
-  metadata_startup_script = <<-EOT
+  metadata_startup_script = <<-EOF
       #!/bin/bash
       sudo apt update
       sudo apt install -y telnet
@@ -35,5 +35,5 @@ resource "google_compute_instance" "bastion" {
       echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
       sudo apt update
       sudo apt install -y terraform
-    EOT
+    EOF
 }
