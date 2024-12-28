@@ -6,10 +6,13 @@ terraform {
       version = ">= 6.14.0"
     }
   }
+  backend "gcs" {
+    bucket = "terraform-on-gcp-gke-cluster"
+    prefix = "module/vpc"
+  }
 }
 
 provider "google" {
-  project = "terra-55091"
-  region  = "us-central1"
-
+  project = var.gcp_project
+  region  = var.gcp_region1
 }
