@@ -26,8 +26,8 @@ boot_disk {
   }
 }
   network_interface {
-    network = "projects/terra-55091/global/networks/myvpc"
-    subnetwork_project =  "terra-55091"
+    network = "projects/gcp-gke-453620/global/networks/myvpc"
+    subnetwork_project =  "gcp-gke-453620"
     subnetwork = google_compute_subnetwork.mysubnet.id
     access_config {
       
