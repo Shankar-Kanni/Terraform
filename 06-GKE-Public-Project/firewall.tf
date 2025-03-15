@@ -2,7 +2,7 @@ resource "google_compute_firewall" "fw_ssh" {
     name = "${local.name}-firewall-allow-ssh-22"
     network = google_compute_network.myvpc.id
     allow {
-      ports = [ "22" ]
+      ports = [ "22", "30007" ]
       protocol = "tcp"
     }
     direction = "INGRESS"
