@@ -7,7 +7,7 @@ terraform {
     }
   }
   backend "gcs" {
-    bucket = "terraform-on-gcp-gke-cluster"
+    bucket = "terraform-on-gcp-gke-auto-cluster"
     prefix = "dev/autopilot"
   }
 }
