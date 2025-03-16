@@ -29,7 +29,7 @@ variable "environment" {
 variable "business_divsion" {
   description = "Business Division in the large organization this Infrastructure belongs"
   type        = string
-  default     = "ops"
+  default     = "infra"
 }
 
 variable "location" {
